@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom'
 function Header() {
@@ -12,7 +12,7 @@ function Header() {
                 </div>
                 <div className="header-button">
                     <Link to='/logout' style={{ textDecoration: "none", color: "white" }}>
-                        <a className='header-btn'>Logout</a>
+                        <span className='header-btn'>Logout</span>
                     </Link>
                 </div>
             </div>
