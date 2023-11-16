@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react';
 import './Header.css';
 
-function header() {
+function Header({ setProducts }) {
     return (
         <div>
             <div className="header">
@@ -16,4 +16,4 @@ function header() {
     )
 }
 
-export default header
+export default Header;
