@@ -1,0 +1,17 @@
+.Logbody{
+    margin: 0;
+    padding: 0;
+}
+.Logoutcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.logout-content h1{
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+.logout-content p{
+    font-size: 16px;
+}

@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
 import './Header.css';
-
-function Header({ setProducts }) {
+import { Link } from 'react-router-dom'
+function Header() {
     return (
         <div>
             <div className="header">
                 <div className="header-title">
-                    <h1>Zensphinx</h1>
+                    <Link to='/' style={{ textDecoration: "none", color: "white" }}>
+                        <h1>Zensphinx</h1>
+                    </Link>
                 </div>
                 <div className="header-button">
-                    <a className='header-btn'>Click here</a>
+                    <Link to='/logout' style={{ textDecoration: "none", color: "white" }}>
+                        <a className='header-btn'>Logout</a>
+                    </Link>
                 </div>
             </div>
         </div>
     )
 }
-
 export default Header;
