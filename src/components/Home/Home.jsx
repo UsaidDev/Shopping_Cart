@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getAllProduct } from '../ApiServices/Api';
 
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -10,13 +11,13 @@ function Home() {
       try {
         const data = await getAllProduct();
         setProducts(data);
-        console.log(data)
       } catch (error) {
         console.log("Error fetching Products:", error);
       }
     }
     fetchProducts();
   }, [setProducts]);
+
   return (
     <div>
       <div className="container">
@@ -30,7 +31,9 @@ function Home() {
                   <p>
                     <span className='price'>${obj.price}</span>
                   </p>
-                  <button className='product-button'>Product Details</button>
+                  <Link to={`/product/:id${obj.id}`}>
+                    <button className='product-button'>Product Details</button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,13 +1,11 @@
-// App.jsx
 import React from 'react';
 import AppRoutes from './components/Routes/Routes'; 
 
 function App() {
   return (
     <div>
-      <AppRoutes/> 
+      <AppRoutes/>
     </div>
   );
 }
-
 export default App;
